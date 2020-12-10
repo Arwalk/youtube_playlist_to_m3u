@@ -4,6 +4,11 @@ youtube_playlist_to_m3u
 
 A quick tool to extract a M3U playlist from a youtube playlist url
 
+Usage
+=====
+
+yt_m3u {youtube_playlist_link} {output_file}
+
 Note
 ====
 
