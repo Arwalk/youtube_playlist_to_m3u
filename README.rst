@@ -2,15 +2,7 @@
 youtube_playlist_to_m3u
 =======================
 
-
-Add a short description here!
-
-
-Description
-===========
-
-A longer description of your project goes here...
-
+A quick tool to extract a M3U playlist from a youtube playlist url
 
 Note
 ====

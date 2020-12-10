@@ -4,23 +4,13 @@ youtube_playlist_to_m3u
 
 This is the documentation of **youtube_playlist_to_m3u**.
 
-.. note::
 
-    This is the main page of your project's `Sphinx`_ documentation.
-    It is formatted in `reStructuredText`_. Add additional pages
-    by creating rst-files in ``docs`` and adding them to the `toctree`_ below.
-    Use then `references`_ in order to link them from this page, e.g.
-    :ref:`authors` and :ref:`changes`.
 
-    It is also possible to refer to the documentation of other Python packages
-    with the `Python domain syntax`_. By default you can reference the
-    documentation of `Sphinx`_, `Python`_, `NumPy`_, `SciPy`_, `matplotlib`_,
-    `Pandas`_, `Scikit-Learn`_. You can add more by extending the
-    ``intersphinx_mapping`` in your Sphinx's ``conf.py``.
+.. argparse::
+   :module: youtube_playlist_to_m3u.main
+   :func: get_arg_parser
+   :prog: youtube_playlist_to_m3u
 
-    The pretty useful extension `autodoc`_ is activated by default and lets
-    you include documentation from docstrings. Docstrings can be written in
-    `Google style`_ (recommended!), `NumPy style`_ and `classical style`_.
 
 
 Contents
