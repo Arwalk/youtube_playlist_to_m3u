@@ -1,5 +1,6 @@
 import json
 
+
 def build_m3u(entries):
     m3u = ["#EXTM3U\n", '\n']
 
@@ -12,8 +13,10 @@ def build_m3u(entries):
 
     return m3u
 
+
 def get_entries_from_msg(msg):
     return json.loads(msg)["entries"]
+
 
 class PlaylistExtractorFromLogs(object):
 
@@ -23,15 +26,12 @@ class PlaylistExtractorFromLogs(object):
     def get_playlist(self, original_msg):
         self.entries = get_entries_from_msg(original_msg)
 
-    def debug(self, msg : str):
+    def debug(self, msg: str):
         if msg.startswith('{"_type": "playlist"'):
             self.get_playlist(msg)
 
     def warning(self, msg):
         print(msg)
-        pass
 
     def error(self, msg):
         print(msg)
-
-

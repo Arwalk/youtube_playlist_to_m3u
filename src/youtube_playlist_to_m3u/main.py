@@ -58,16 +58,6 @@ def parse_args(args):
     return get_arg_parser().parse_args(args)
 
 
-def setup_logging(loglevel):
-    """Setup basic logging
-
-    Args:
-      loglevel (int): minimum loglevel for emitting messages
-    """
-    logformat = "[%(asctime)s] %(levelname)s:%(name)s:%(message)s"
-    logging.basicConfig(level=loglevel, stream=sys.stdout,
-                        format=logformat, datefmt="%Y-%m-%d %H:%M:%S")
-
 
 def main(args):
     """Main entry point allowing external calls
@@ -86,7 +76,7 @@ def main(args):
     }
 
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-        result = ydl.download([args.link]) # it doesn't actually download anything, don't worry.
+        ydl.download([args.link]) # it doesn't actually download anything, don't worry.
 
     if extractor.entries is not None :
         m3u = build_m3u(extractor.entries)
