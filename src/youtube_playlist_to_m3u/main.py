@@ -80,6 +80,7 @@ def main(args):
 
     if extractor.entries is not None :
         m3u = build_m3u(extractor.entries)
+        m3u = [bytes(x, 'utf-8').decode('utf-8', 'ignore') for x in m3u]
         with open(args.outputfile, "w", encoding='utf-8') as output_file:
             output_file.writelines(m3u)
 
